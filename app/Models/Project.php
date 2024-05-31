@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'content', 'slug'];
+    protected $fillable = ['title', 'image', 'content', 'slug'];
 
     // we must create a generateSlug function that generates a slug for each project that has to be unique for each one
     public static function generateSlug($title) {

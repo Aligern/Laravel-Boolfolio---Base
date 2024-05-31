@@ -12,3 +12,23 @@ $fa-font-path: "../fonts/webfonts" !default;
 h1 {
     color: $text-color;
 }
+
+#admin {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+     
+    #sidebar {
+        background-color: $primary;
+    }
+
+    #wrapper {
+        flex-grow: 1;
+        background-color: $secondary;
+
+        header {
+            min-height: 70px;
+            background-color: greenyellow;
+        }
+     }
+}

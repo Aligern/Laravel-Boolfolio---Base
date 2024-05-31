@@ -28,3 +28,6 @@ return new class extends Migration
         });
     }
 };
+
+
+# !!! REMEMBER TO ADD IMAGE TO PROJECTS TABLE INTO MODELS->PROJECT. !!!
