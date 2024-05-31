@@ -12,6 +12,12 @@ $fa-font-path: "../fonts/webfonts" !default;
 h1 {
     color: $text-color;
 }
+#logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
 
 #admin {
     height: 100vh;
@@ -27,11 +33,11 @@ h1 {
 
     #wrapper {
         flex-grow: 1;
-        background-color: $secondary;
+        background-color: white;
 
         header {
             min-height: 70px;
-            background-color: greenyellow;
+            background-color: $secondary;
             .profile-img {
                 height: 2rem;
                 width: 2rem;
