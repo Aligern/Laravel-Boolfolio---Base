@@ -20,6 +20,9 @@ h1 {
      
     #sidebar {
         background-color: $primary;
+        a{
+            color: white;
+        }
     }
 
     #wrapper {
@@ -29,6 +32,10 @@ h1 {
         header {
             min-height: 70px;
             background-color: greenyellow;
+            .profile-img {
+                height: 2rem;
+                width: 2rem;
+            }
         }
      }
 }
