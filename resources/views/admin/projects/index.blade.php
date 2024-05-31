@@ -4,7 +4,10 @@
 
 @section('content')
     <section>
+      <div class="d-flex justify-content-between align-items-center py-3">
         <h1>Projects</h1>
+        <a href="{{route('admin.projects.create')}}" class="btn btn-primary me-2"><i class="fa-solid fa-plus"></i> Add new project</a>
+      </div>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -19,12 +22,12 @@
               <tbody>
                 @foreach ($projects as $project)
                 <tr>
-                    <td>{{$project->id}}</td>
-                    <td>{{$project->title}}</td>
-                    <td>{{$project->slug}}</td>
-                    <td>{{$project->created_at}}</td>
-                    <td>{{$project->updated_at}}</td>
-                    <td>View - Edit - Delete</td>
+                  <td>{{$project->id}}</td>
+                  <td>{{$project->title}}</td>
+                  <td>{{$project->slug}}</td>
+                  <td>{{$project->created_at}}</td>
+                  <td>{{$project->updated_at}}</td>
+                  <td>View - Edit - Delete</td>
                 </tr>
                 @endforeach
               </tbody>
