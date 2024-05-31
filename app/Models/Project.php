@@ -11,7 +11,17 @@ class Project extends Model
     use HasFactory;
     protected $fillable = ['title', 'content', 'slug'];
 
+    // we must create a generateSlug function that generates a slug for each project that has to be unique for each one
     public static function generateSlug($title) {
-        return Str::slug($title, '-');
+        // the slug take the title and turn it into a slug
+        $slug = Str::slug($title, '-');
+        $count = 1;
+        // the slug cycle will run and generate a new one if the slug already exists
+        while(Project::where('slug', $slug)->first()) {
+            // if the slug already exists, we generate a new one with different count
+            $slug = Str::slug($title, '-' . $count);
+            $count++;
+        }
+        return $slug;
     }
 }
