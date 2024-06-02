@@ -11,7 +11,7 @@
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Project Title</label>
-            <input type="text" class="form-control" @error('title') is-invalid @enderror id="title" name="title" value="{{old('title')}}" minlength="3" maxlength="200" required>
+            <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{old('title')}}" minlength="3" maxlength="200" required>
             @error('title')
                 <div class="alert alert-danger">{{ $message }}</div> 
             @enderror
@@ -19,7 +19,7 @@
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Image</label>
-            <input type="url" class="form-control" @error('image') is-invalid @enderror id="image" name="image" value="{{old('image')}}" maxlength="255">
+            <input type="url" class="form-control @error('image') is-invalid @enderror" id="image" name="image" value="{{old('image')}}" maxlength="255">
             @error('image')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
