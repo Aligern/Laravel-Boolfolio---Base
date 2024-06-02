@@ -27,7 +27,19 @@
                   <td>{{$project->slug}}</td>
                   <td>{{$project->created_at}}</td>
                   <td>{{$project->updated_at}}</td>
-                  <td>View - Edit - Delete</td>
+                  <td>
+                    <a href="{{route('admin.projects.show', $project->slug)}}">
+                      <i class="fa-regular fa-eye"></i>
+                    </a>
+                    <a href="{{route('admin.projects.edit', $project->slug)}}">
+                      <i class="fa-solid fa-file-pen"></i> 
+                    </a>
+                    <form action="">
+                      <a href="{{route('admin.projects.destroy', $project->slug)}}">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </a>
+                    </form>
+                  </td>
                 </tr>
                 @endforeach
               </tbody>
