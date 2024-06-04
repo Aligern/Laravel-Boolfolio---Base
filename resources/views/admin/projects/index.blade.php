@@ -34,10 +34,12 @@
                     <a href="{{route('admin.projects.edit', $project->slug)}}">
                       <i class="fa-solid fa-file-pen"></i> 
                     </a>
-                    <form action="">
-                      <a href="{{route('admin.projects.destroy', $project->slug)}}">
+                    <form action="{{route('admin.projects.destroy', $project->slug)}} method="POST" class="d-inline-block">
+                      @csrf
+                      @method('DELETE')
+                      <button type="submit" class="delete-button" href="{{route('admin.projects.destroy', $project->slug)}}">
                         <i class="fa-solid fa-trash-can"></i>
-                      </a>
+                      </button>
                     </form>
                   </td>
                 </tr>

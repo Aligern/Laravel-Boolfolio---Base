@@ -16,6 +16,6 @@
         </div>
     </div>
     <p>{{$project->content}}</p>
-    <img src="{{$project->image}}" alt="{{$project->title}}">
+    <img src="{{asset('storage/'. $project->image)}}" alt="{{$project->title}}">
 </section>
 @endSection
