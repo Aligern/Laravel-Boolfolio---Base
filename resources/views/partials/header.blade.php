@@ -14,7 +14,7 @@
                 <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
+                <a class="nav-link" href="{{ route('admin.projects.index') }}">Projects</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fa-brands fa-github"></i></a>
